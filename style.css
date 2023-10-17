@@ -18,6 +18,7 @@ body {
     transform-style: preserve-3d;
     animation: animate 20s linear infinite;
 }
+
 @keyframes animate {
     0% {
         transform: perspective(1020px) rotateY(0deg);
@@ -26,6 +27,7 @@ body {
         transform: perspective(1020px) rotateY(360deg);
     }
 }
+
 .box span {
     position: absolute;
     top: 0;
@@ -37,6 +39,7 @@ body {
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(220px);
     -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, transparent);
 }
+
 .box span img {
     position: absolute;
     top: 0;
@@ -45,4 +48,18 @@ body {
     height: 80%;
     object-fit: cover;
     margin: 10%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .box {
+        width: 150px;
+        height: 225px; 
+    }
+
+    .box span img {
+        width: 60%;
+        height: 60%; 
+        margin: 20px; 
+    }
 }
